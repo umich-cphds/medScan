@@ -192,8 +192,11 @@ DACT.est = function(p.alpha,p.beta){
 #'
 #' @param z.alpha the z-test statistic for alpha (exposure effect on the mediator).
 #' @param z.beta the z-test statistic for beta (mediator effect on the outcome).
-#' @param method the method to use for testing the mediation effect. It should belong to one of the six methods: Sobel, MaxP, JT_comp, HDMT, DACT and Sobel_comp.
-#'
+#' @param method the method to use for testing the mediation effect. It should belong to one of the six methods: `"Sobel"`, `"MaxP"`, `"JT_comp"`, `"HDMT"`, `"DACT"`, and `"Sobel_comp"`.
+#' (1) Sobel’s test (`method = "Sobel"`), (2) Max P test
+#' (`method = "MaxP"`), (3) joint significance test under the composite null hypothesis (`method = "JT_comp"`), (4) high
+#' dimensional mediation testing (`method = "HDMT"`), (5) Divide-Aggregate Composite-null Test (`method = "DACT"`), and
+#' (6) Sobel’s test under the composite null hypothesis (`method = "Sobel_comp"`).
 #' @return
 #' A list that contains
 #' \itemize{
@@ -202,6 +205,13 @@ DACT.est = function(p.alpha,p.beta){
 #' method. pi00 is the proportion of alpha=beta=0; pi01 is the proportion of
 #' alpha=0 and beta!=0; and pi10 is the proportion of alpha!=0 and beta=0.}
 #' }
+#'
+#' @details
+#' The available methods are:
+#' (1) Sobel’s test (`method = "Sobel"`), (2) Max P test
+#' (`method = "MaxP"`), (3) joint significance test under the composite null hypothesis (`method = "JT_comp"`), (4) high
+#' dimensional mediation testing (`method = "HDMT"`), (5) Divide-Aggregate Composite-null Test (`method = "DACT"`), and
+#' (6) Sobel’s test under the composite null hypothesis (`method = "Sobel_comp"`).
 #'
 #' @references
 #' Sobel, M. E. (1982). Asymptotic confidence intervals for indirect effects in structural equation models. Sociological methodology, 13, 290-312.

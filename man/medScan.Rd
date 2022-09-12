@@ -11,7 +11,11 @@ medScan(z.alpha, z.beta, method)
 
 \item{z.beta}{the z-test statistic for beta (mediator effect on the outcome).}
 
-\item{method}{the method to use for testing the mediation effect. It should belong to one of the six methods: Sobel, MaxP, JT_comp, HDMT, DACT and Sobel_comp.}
+\item{method}{the method to use for testing the mediation effect. It should belong to one of the six methods: \code{"Sobel"}, \code{"MaxP"}, \code{"JT_comp"}, \code{"HDMT"}, \code{"DACT"}, and \code{"Sobel_comp"}.
+(1) Sobel’s test (\code{method = "Sobel"}), (2) Max P test
+(\code{method = "MaxP"}), (3) joint significance test under the composite null hypothesis (\code{method = "JT_comp"}), (4) high
+dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Composite-null Test (\code{method = "DACT"}), and
+(6) Sobel’s test under the composite null hypothesis (\code{method = "Sobel_comp"}).}
 }
 \value{
 A list that contains
@@ -31,6 +35,13 @@ and Sobel's test under the composite null hypothesis. Du, J., Zhou, X., Hao, W.,
 Liu, Y., Smith, J. A., & Mukherjee, B. (2022). "Methods for Large-scale Single
 Mediator Hypothesis Testing: Possible Choices and Comparisons."
 arXiv preprint \url{arXiv:2203.13293}.
+}
+\details{
+The available methods are:
+(1) Sobel’s test (\code{method = "Sobel"}), (2) Max P test
+(\code{method = "MaxP"}), (3) joint significance test under the composite null hypothesis (\code{method = "JT_comp"}), (4) high
+dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Composite-null Test (\code{method = "DACT"}), and
+(6) Sobel’s test under the composite null hypothesis (\code{method = "Sobel_comp"}).
 }
 \examples{
 # simulate data under the mixture null
