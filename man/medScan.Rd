@@ -34,7 +34,6 @@ high dimensional mediation testing, divide-aggregate composite null test,
 and Sobel's test under the composite null hypothesis. Du, J., Zhou, X., Hao, W.,
 Liu, Y., Smith, J. A., & Mukherjee, B. (2022). "Methods for Large-scale Single
 Mediator Hypothesis Testing: Possible Choices and Comparisons."
-arXiv preprint \url{arXiv:2203.13293}.
 }
 \details{
 The available methods are:
@@ -42,6 +41,9 @@ The available methods are:
 (\code{method = "MaxP"}), (3) joint significance test under the composite null hypothesis (\code{method = "JT_comp"}), (4) high
 dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Composite-null Test (\code{method = "DACT"}), and
 (6) Sobel’s test under the composite null hypothesis (\code{method = "Sobel_comp"}).
+
+We incorporated code from the DACT R package formerly on CRAN. Author: Zhonghua Liu
+Maintainer: Zhonghua Liu, zhhliu@hku.hk.
 }
 \examples{
 # simulate data under the mixture null
@@ -66,23 +68,10 @@ for(i in 1:n){
 
 # obtain p-values
 
+# method = "Sobel", "MaxP", "HDMT", "Sobel_comp", "JT_comp", "DACT"
 obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "Sobel")
 qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel")
 
-obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "MaxP")
-qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "MaxP")
-
-obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "HDMT")
-qqman::qq(obj$pvalues, xlim = c(0,4), ylim = c(0,4), main="HDMT")
-
-obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "Sobel_comp")
-qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel-comp")
-
-obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "JT_comp")
-qqman::qq(obj$pvalues, xlim = c(0,4), ylim = c(0,4), main="JT-comp")
-
-obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "DACT")
-qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main="DACT")
 
 
 

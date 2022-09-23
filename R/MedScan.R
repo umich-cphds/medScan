@@ -188,7 +188,6 @@ DACT.est = function(p.alpha,p.beta){
 #'     and Sobel's test under the composite null hypothesis. Du, J., Zhou, X., Hao, W.,
 #' Liu, Y., Smith, J. A., & Mukherjee, B. (2022). "Methods for Large-scale Single
 #'     Mediator Hypothesis Testing: Possible Choices and Comparisons."
-#' arXiv preprint <arXiv:2203.13293>.
 #'
 #' @param z.alpha the z-test statistic for alpha (exposure effect on the mediator).
 #' @param z.beta the z-test statistic for beta (mediator effect on the outcome).
@@ -212,6 +211,9 @@ DACT.est = function(p.alpha,p.beta){
 #' (`method = "MaxP"`), (3) joint significance test under the composite null hypothesis (`method = "JT_comp"`), (4) high
 #' dimensional mediation testing (`method = "HDMT"`), (5) Divide-Aggregate Composite-null Test (`method = "DACT"`), and
 #' (6) Sobel’s test under the composite null hypothesis (`method = "Sobel_comp"`).
+#'
+#' We incorporated code from the DACT R package formerly on CRAN. Author: Zhonghua Liu
+#' Maintainer: Zhonghua Liu, zhhliu@hku.hk.
 #'
 #' @references
 #' Sobel, M. E. (1982). Asymptotic confidence intervals for indirect effects in structural equation models. Sociological methodology, 13, 290-312.
@@ -244,33 +246,20 @@ DACT.est = function(p.alpha,p.beta){
 #'
 #' # obtain p-values
 #'
+#' # method = "Sobel", "MaxP", "HDMT", "Sobel_comp", "JT_comp", "DACT"
 #' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "Sobel")
 #' qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel")
 #'
-#' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "MaxP")
-#' qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "MaxP")
-#'
-#' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "HDMT")
-#' qqman::qq(obj$pvalues, xlim = c(0,4), ylim = c(0,4), main="HDMT")
-#'
-#' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "Sobel_comp")
-#' qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel-comp")
-#'
-#' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "JT_comp")
-#' qqman::qq(obj$pvalues, xlim = c(0,4), ylim = c(0,4), main="JT-comp")
-#'
-#' obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "DACT")
-#' qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main="DACT")
 #'
 #'
 #'
 #' @importFrom HDMT null_estimation
 #' @importFrom stats pnorm sd
 #' @importFrom utils flush.console
-#' @importFrom DACT DACT
 #' @importFrom fdrtool gcmlcm
 #' @importFrom locfdr locfdr
 #' @importFrom qvalue qvalue
+#' @importFrom qqman qq
 #' @export
 medScan = function(z.alpha, z.beta, method){
   # z.alpha: the z-test statistic for alpha (exposure effect on the mediator)
@@ -344,6 +333,7 @@ medScan = function(z.alpha, z.beta, method){
 # }
 
 # obtain p-values
+#Remotes: zhonghualiu/DACT
 
 # obj = medScan(z.alpha = z.alpha, z.beta = z.beta, method = "Sobel")
 # qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel")

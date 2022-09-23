@@ -1,13 +1,30 @@
+---
+output: github_document
+---
 
-`medScan` ....
+# R Package `medScan`
 
-### How to run
+A collection of methods for large scale single mediator hypothesis
+testing. The six included methods for testing the mediation effect are Sobel's
+test, Max P test, joint significance test under the composite null hypothesis,
+high dimensional mediation testing, divide-aggregate composite null test,
+and Sobel's test under the composite null hypothesis. Du, J., Zhou, X., Hao, W.,
+Liu, Y., Smith, J. A., & Mukherjee, B (2022) "Methods for Large-scale Single
+Mediator Hypothesis Testing: Possible Choices and Comparisons."
+arXiv preprint <arXiv:10.48550/arXiv.2203.13293>.
 
+### How to install
+
+1. Install `R` from the [R Project Site](https://www.r-project.org/).
+
+2. Install the `remotes` R package with `install.packages("remotes")`. 
+
+3. Install the `medScan` package.
 ```r
 remotes::install_github("umich-cphds/medScan")
 ```
 
-Example
+### Example
 
 ```r
 # simulate data under the mixture null
