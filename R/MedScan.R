@@ -18,7 +18,7 @@ maxP.est = function(p.alpha,p.beta){
 JTcomp.est = function(z.alpha,z.beta){
 
   # Running time: 17.61s
-  cat("The range of test statistics, from 0 to (default=10): ")
+  message("The range of test statistics, from 0 to (default=10): ")
   # int<-as.numeric(readLines(con=stdin(),1))
   int <- max(c(abs(z.alpha*z.beta)/sd(z.alpha),abs(z.alpha*z.beta)/sd(z.beta)))+2
 
