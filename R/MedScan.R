@@ -53,7 +53,7 @@ JTcomp.est = function(z.alpha,z.beta){
 
 }
 
-p_value_underH1 = function(input_pvalues, alpha1, alpha2) {
+p_value_underH1 = function(input_pvalues, alpha1, alpha2, verbose = FALSE) {
 
   # input_pvalues contains two columns.
   # The first column is p_1j (p for alpha=0). The second column is p_2j (p for beta=0).
@@ -93,7 +93,7 @@ p_value_underH1 = function(input_pvalues, alpha1, alpha2) {
       gcdf1[orderq1<=xknots1[i]] <- (Fknots1[i]/xknots1[i])*orderq1[orderq1<=xknots1[i]]
     } else {
       if (sum(orderq1>xknots1[i-1] & orderq1<=xknots1[i])>0){
-        print(i)
+        if(verbose) {print(i)}
         temp <- orderq1[orderq1>xknots1[i-1] & orderq1<=xknots1[i]]
         gcdf1[orderq1>xknots1[i-1] & orderq1<=xknots1[i]] <- Fknots1[i-1] + (Fknots1[i]-Fknots1[i-1])/(xknots1[i]-xknots1[i-1])*(temp-xknots1[i-1])
       }
