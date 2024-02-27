@@ -82,5 +82,5 @@ MacKinnon, D. P., Lockwood, C. M., Hoffman, J. M., West, S. G., & Sheets, V. (20
 Huang, Y. T. (2019). Genome-wide analyses of sparse mediation effects under composite null hypotheses. The Annals of Applied Statistics, 13(1), 60-84.
 Liu, Z., Shen, J., Barfield, R., Schwartz, J., Baccarelli, A. A., & Lin, X. (2022). Large-scale hypothesis testing for causal mediation effects with applications in genome-wide epigenetic studies. Journal of the American Statistical Association, 117(537), 67-81.
 Dai, J. Y., Stanford, J. L., & LeBlanc, M. (2022). A multiple-testing procedure for high-dimensional mediation hypotheses. Journal of the American Statistical Association, 117(537), 198-213.
-Du, J., Zhou, X., Hao, W., Liu, Y., Smith, J. A., & Mukherjee, B. (2022). Methods for Large-scale Single Mediator Hypothesis Testing: Possible Choices and Comparisons. arXiv preprint arXiv:2203.13293.
+Du, Jiacong, et al. "Methods for large‐scale single mediator hypothesis testing: Possible choices and comparisons." Genetic Epidemiology 47.2 (2023): 167-184.
 }

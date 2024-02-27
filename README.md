@@ -8,10 +8,7 @@ A collection of methods for large scale single mediator hypothesis
 testing. The six included methods for testing the mediation effect are Sobel's
 test, Max P test, joint significance test under the composite null hypothesis,
 high dimensional mediation testing, divide-aggregate composite null test,
-and Sobel's test under the composite null hypothesis. Du, J., Zhou, X., Hao, W.,
-Liu, Y., Smith, J. A., & Mukherjee, B (2022) "Methods for Large-scale Single
-Mediator Hypothesis Testing: Possible Choices and Comparisons."
-arXiv preprint <arXiv:10.48550/arXiv.2203.13293>.
+and Sobel's test under the composite null hypothesis. Du, Jiacong, et al. "Methods for large‐scale single mediator hypothesis testing: Possible choices and comparisons." Genetic Epidemiology 47.2 (2023): 167-184.
 
 ### How to install
 
