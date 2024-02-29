@@ -1,6 +1,6 @@
 Package: medScan
 Title: Large Scale Single Mediator Hypothesis Testing
-Version: 1.0.1
+Version: 1.0.2
 URL: https://github.com/umich-cphds/medScan
 BugReports: https://github.com/umich-cphds/medScan/issues
 Authors@R: c(

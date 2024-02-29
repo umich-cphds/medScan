@@ -11,7 +11,9 @@ medScan(z.alpha, z.beta, method)
 
 \item{z.beta}{the z-test statistic for beta (mediator effect on the outcome).}
 
-\item{method}{the method to use for testing the mediation effect. It should belong to one of the six methods: \code{"Sobel"}, \code{"MaxP"}, \code{"JT_comp"}, \code{"HDMT"}, \code{"DACT"}, and \code{"Sobel_comp"}.
+\item{method}{the method to use for testing the mediation effect. It should
+belong to one of the six methods: \code{"Sobel"}, \code{"MaxP"}, \code{"JT_comp"}, \code{"HDMT"},
+\code{"DACT"}, and \code{"Sobel_comp"}.
 (1) Sobel’s test (\code{method = "Sobel"}), (2) Max P test
 (\code{method = "MaxP"}), (3) joint significance test under the composite null hypothesis (\code{method = "JT_comp"}), (4) high
 dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Composite-null Test (\code{method = "DACT"}), and
@@ -20,8 +22,8 @@ dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Com
 \value{
 A list that contains
 \itemize{
-\item{pvalues: }{p-values for all mediators from the chosen method.}
-\item{pi: }{the estimated proportions of the three null cases from the HDMT
+\item{"pvalues: "}{p-values for all mediators from the chosen method.}
+\item{"pi: "}{the estimated proportions of the three null cases from the HDMT
 method. pi00 is the proportion of alpha=beta=0; pi01 is the proportion of
 alpha=0 and beta!=0; and pi10 is the proportion of alpha!=0 and beta=0.}
 }
